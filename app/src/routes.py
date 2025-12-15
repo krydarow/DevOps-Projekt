@@ -19,3 +19,7 @@ def create_user():
     db.session.add(user)
     db.session.commit()
     return {"id": user.id, "name": user.name}, 201
+
+@bp.get("/")
+def index():
+    return {"message": "DevOps Projekt API działa"}, 200
