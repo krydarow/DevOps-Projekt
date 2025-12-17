@@ -12,6 +12,8 @@ COPY app/ .
 # Etap 2
 FROM builder AS test
 
+ENV PYTHONPATH=/app
+
 RUN pip install pytest
 
 RUN pytest
