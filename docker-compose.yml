@@ -17,12 +17,12 @@ services:
 
   seed_runner:
     build: .
-    command: ["python", "seed/run_seed.py"]
+    command: ["/seed_script.sh"]
     depends_on:
       db:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgresql+psycopg2://postgres:postgres@db:5432/devops_db
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/devops_db
     volumes:
       - seed_output:/seed_output
     networks:
