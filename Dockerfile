@@ -30,6 +30,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app/ .
 
+COPY docker/seed_script.sh /seed_script.sh
+RUN chmod +x /seed_script.sh
+
 EXPOSE 5000
 
 CMD ["python", "run.py"]
