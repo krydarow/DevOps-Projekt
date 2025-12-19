@@ -22,4 +22,4 @@ def create_user():
 
 @bp.get("/")
 def index():
-    return {"message": "DevOps Projekt API działa"}, 200
+    return {"message": "DevOps Projekt API dziala"}, 200
